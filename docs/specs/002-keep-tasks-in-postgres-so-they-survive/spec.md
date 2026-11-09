@@ -1,7 +1,7 @@
 ---
 spec_id: 002-keep-tasks-in-postgres-so-they-survive
 title: Keep tasks in Postgres so they survive restarts and are shared by every instance
-status: approved
+status: building
 priority: P1
 shape: service-python
 parent: ika100-demo/taskboard8-gitops:001-persistent-tasks-and-web-task-board
@@ -130,3 +130,4 @@ Smoke: keep the existing ones; a read-only `GET /tasks` -> 200 smoke must remain
 
 - 2026-11-10 created from the system plan, with its criteria (spec 147)
 - 2026-11-10 approved
+- 2026-11-10 building
