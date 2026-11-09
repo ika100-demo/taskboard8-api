@@ -51,7 +51,7 @@ class Database:
         async with conn.transaction():
             await conn.execute("SELECT pg_advisory_xact_lock(%s)", (SCHEMA_LOCK_KEY,))
             for statement in self._schema:
-                await conn.execute(statement)  # type: ignore[call-overload]
+                await conn.execute(statement)
         self._ensured.add(url)
 
     async def run(self, op: Callable[[psycopg.AsyncConnection[Any]], Awaitable[T]]) -> T:
