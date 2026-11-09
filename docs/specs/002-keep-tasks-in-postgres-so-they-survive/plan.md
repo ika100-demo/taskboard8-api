@@ -17,6 +17,7 @@ tasks:
     covers: [AC-002.4, AC-002.5, AC-002.6]
     parallel_safe: true
     depends_on: [t1]
+    done: true
   - id: t3
     title: Back the task routes with Postgres, map outages to 503 and make /ready check the database
     files: [src/taskboard8_api/tasks/store.py, src/taskboard8_api/tasks/router.py, src/taskboard8_api/tasks/__init__.py, src/taskboard8_api/main.py, tests/test_task_store_unit.py]
