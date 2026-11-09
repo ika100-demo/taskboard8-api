@@ -1,7 +1,7 @@
 ---
 spec_id: 001-create-and-list-tasks
 title: Create and list tasks
-status: draft
+status: approved
 priority: P1
 shape: service-python
 ---
@@ -55,3 +55,4 @@ As an API client, I want to list all tasks, so that I can see what has been reco
 
 - 2026-11-09 created
 - 2026-11-09 amended: open question on authentication answered (no authentication; access set by deployment exposure), recorded as a non-goal; criteria unchanged
+- 2026-11-09 approved
