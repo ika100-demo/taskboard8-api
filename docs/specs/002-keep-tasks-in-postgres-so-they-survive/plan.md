@@ -10,6 +10,7 @@ tasks:
     covers: [AC-002.1, AC-002.2, AC-002.3, AC-002.4, AC-002.6]
     parallel_safe: true
     depends_on: []
+    done: true
   - id: t2
     title: Add the Database layer (timeouts, schema once under advisory lock, unavailable mapping, ping)
     files: [src/taskboard8_api/db.py, tests/test_database_unit.py, docs/env-vars.md]
