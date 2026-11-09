@@ -9,6 +9,12 @@ Configuration is read exclusively from environment variables. Defaults below are
 | `PORT` | `8080` | HTTP port the service listens on. |
 | `LOG_LEVEL` | `INFO` | Logging level. One of `DEBUG`, `INFO`, `WARNING`, `ERROR`. |
 
+## Database
+
+| Variable | Default | Description |
+|---|---|---|
+| `DATABASE_URL` | _(unset)_ | `postgresql://` URL of the tasks database, injected by the system's `postgres` resource. No default: required for the task routes and `/ready`. When unset (or blank) they answer 503; `/health` stays 200. The `PG*` variables are ignored. |
+
 ## Observability
 
 | Variable | Default | Description |
