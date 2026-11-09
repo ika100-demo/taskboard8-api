@@ -8,6 +8,7 @@
     "pip-audit@2.10.1",
     "detect-secrets@1.5.0",
     "trivy@0.74.0",
+    "postgresql@17",
     "git@latest",
     "gh@latest"
   ],
