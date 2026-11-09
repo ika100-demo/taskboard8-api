@@ -1,1 +1,1 @@
-"""Task models and in-memory storage."""
+"""Task models and Postgres-backed storage."""

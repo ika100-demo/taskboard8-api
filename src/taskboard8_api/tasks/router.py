@@ -23,14 +23,14 @@ StoreDep = Annotated[TaskStore, Depends(get_task_store)]
 
 
 @router.post("/tasks", status_code=201, response_model=Task)
-def create_task(body: TaskCreate, store: StoreDep) -> Task:
+async def create_task(body: TaskCreate, store: StoreDep) -> Task:
     """Create a task."""
-    task = store.add(body.title, body.due_date)
+    task = await store.add(body.title, body.due_date)
     log.info("task_created", task_id=task.id)
     return task
 
 
 @router.get("/tasks", response_model=list[Task])
-def list_tasks(store: StoreDep) -> list[Task]:
+async def list_tasks(store: StoreDep) -> list[Task]:
     """List tasks in creation order."""
-    return store.list()
+    return await store.list()
